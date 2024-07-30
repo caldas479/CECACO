@@ -11,31 +11,4 @@ tasks:
     init: yarn install
     command: echo "Dependencies installed."
 
-  - name: Initialize Prisma
-    init: npx prisma init
-    command: echo "Prisma initialized."
 
-  - name: Run Migrations
-    init: yarn prisma migrate dev --name init
-    command: echo "Migrations run."
-
-  - name: Generate Prisma Client
-    init: yarn prisma generate
-    command: echo "Prisma client generated."
-
-  - name: Build Project
-    init: yarn run build
-    command: echo "Project built."
-
-  - name: Start Development Server
-    command: yarn run start
-
-ports:
-  - port: 4000
-    onOpen: open-preview
-
-vscode:
-  extensions:
-    - Prisma.prisma
-    - esbenp.prettier-vscode
-    - dbaeumer.vscode-eslint
