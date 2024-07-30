@@ -1,7 +1,5 @@
 # CECACO
 
-## Project Description
-
 CECACO is a car license school scheduling system developed using TypeScript, Express.js, Prisma ORM, and PostgreSQL.
 
 ## Getting Started
