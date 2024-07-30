@@ -1,0 +1,26 @@
+{
+  "name": "CECACO",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/caldas479/CECACO.git",
+  "author": "Tiago Caldas <tiago.rodrigues.caldas@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "prisma:migrate": "prisma migrate dev --name init",
+    "prisma:generate": "prisma generate"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.17.0",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "prisma": "^5.17.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.5.4"
+  }
+}
+
+
