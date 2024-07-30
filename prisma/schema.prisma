@@ -22,12 +22,4 @@ model User {
   role      String   // 'student' or 'instructor'
 }
 
-model Schedule {
-  id          Int      @id @default(autoincrement())
-  date        DateTime
-  timeSlot    String
-  instructor  User     @relation(fields: [instructorId], references: [id])
-  instructorId Int
-  student     User?    @relation(fields: [studentId], references: [id])
-  studentId   Int?
-}
+
