@@ -15,8 +15,8 @@ CECACO is a car license school scheduling system developed using TypeScript, Exp
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-username/cecaco.git
-   cd cecaco
+   git clone https://github.com/caldas479/CECACO.git
+   cd CECACO
    ```
 2. Install dependencies:
     ```sh
