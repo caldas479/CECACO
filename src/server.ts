@@ -1,9 +1,9 @@
-import app from "./app";
+import app from './app';
 
 const PORT = process.env.PORT || 4000;
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
+app.get('/', (req, res) => {
+  res.send('Hello World!');
 });
 
 app.listen(PORT, () => {
