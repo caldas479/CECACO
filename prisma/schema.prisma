@@ -15,11 +15,40 @@ generator client {
 }
 
 model User {
-  id        Int      @id @default(autoincrement())
-  name      String
-  email     String   @unique
-  password  String
-  role      String   // 'student' or 'instructor'
+  id       Int      @id @default(autoincrement())
+  name     String
+  email    String   @unique
+  role     String
+  password String
+  instructor Instructor?
+  student    Student?
 }
 
+model Instructor {
+  id           Int    @id @default(autoincrement())
+  availability String
+  userId       Int    @unique
+  user         User   @relation(fields: [userId], references: [id])
+  sessions     Session[]
+}
+
+model Student {
+  id            Int      @id @default(autoincrement())
+  progress      String
+  paymentStatus String
+  userId        Int      @unique
+  user          User     @relation(fields: [userId], references: [id])
+  sessions      Session[]
+}
+
+model Session {
+  id           Int        @id @default(autoincrement())
+  date         String
+  time         String
+  status       String
+  instructorId Int
+  studentId    Int
+  instructor   Instructor @relation(fields: [instructorId], references: [id])
+  student      Student    @relation(fields: [studentId], references: [id])
+}
 
