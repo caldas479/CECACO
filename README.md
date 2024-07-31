@@ -17,24 +17,24 @@ CECACO is a car license school scheduling system developed using TypeScript, Exp
    cd CECACO
    ```
 2. Start db:
-    ```sh
-    sudo service postgresql start
-    sudo -u postgres psql
-    ```
+   ```sh
+   sudo service postgresql start
+   sudo -u postgres psql
+   ```
 3. Install dependencies:
-    ```sh
-    yarn install
-    ```
+   ```sh
+   yarn install
+   ```
 4. Set up the database:
-    ```sh
-    yarn prisma:migrate
-    yarn prisma:generate
-    ```
+   ```sh
+   yarn prisma:migrate
+   yarn prisma:generate
+   ```
 5. Start the server:
-    ```sh
-    yarn dev
-    ```
-    
+   ```sh
+   yarn dev
+   ```
+
 ### Environment Variables
 
 Create a `.env` file in the root of your project and add your environment variables:
