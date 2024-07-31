@@ -16,16 +16,21 @@ CECACO is a car license school scheduling system developed using TypeScript, Exp
    git clone https://github.com/caldas479/CECACO.git
    cd CECACO
    ```
-2. Install dependencies:
+2. Start db:
+    ```sh
+    sudo service postgresql start
+    sudo -u postgres psql
+    ```
+3. Install dependencies:
     ```sh
     yarn install
     ```
-3. Set up the database:
+4. Set up the database:
     ```sh
     yarn prisma:migrate
     yarn prisma:generate
     ```
-4. Start the server:
+5. Start the server:
     ```sh
     yarn dev
     ```
